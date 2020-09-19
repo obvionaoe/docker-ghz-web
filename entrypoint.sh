@@ -10,3 +10,5 @@ if [ -z $GHZ_DATABASE_CONNECTION  ]; then
     ;;
   esac
 fi
+
+/go/bin/ghz-web
