@@ -6,7 +6,7 @@ WORKDIR $GOPATH/src/ghz/cmd/ghz-web
 RUN go get -d -v
 RUN CGO_ENABLED=0 go build -o /go/bin/ghz-web
 
-FROM scratch
+FROM alpine
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /go/bin/ghz-web /go/bin/ghz-web
 COPY entrypoint.sh .
