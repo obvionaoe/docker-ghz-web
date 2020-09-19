@@ -10,4 +10,5 @@ FROM alpine
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /go/bin/ghz-web /go/bin/ghz-web
 COPY entrypoint.sh .
+RUN chmod +x entrypoint.sh
 ENTRYPOINT ["./entrypoint.sh"]
