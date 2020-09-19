@@ -9,4 +9,5 @@ RUN CGO_ENABLED=0 go build -o /go/bin/ghz-web
 FROM scratch
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=builder /go/bin/ghz-web /go/bin/ghz-web
-ENTRYPOINT ["/go/bin/ghz-web"]
+COPY entrypoint.sh .
+ENTRYPOINT ["./entrypoint.sh"]
