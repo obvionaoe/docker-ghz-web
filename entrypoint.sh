@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ -z $DB_CONNECTION_GHZ  ]; then
   case $GHZ_DATABASE_TYPE in
