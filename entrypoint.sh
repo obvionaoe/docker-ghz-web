@@ -11,4 +11,4 @@ if [ -z $GHZ_DATABASE_CONNECTION  ]; then
   esac
 fi
 
-/go/bin/ghz-web
+/go/bin/ghz-web $@
